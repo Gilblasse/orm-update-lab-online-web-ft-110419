@@ -47,6 +47,8 @@ class Student
     student
   end
   
+  def UPDATE
+  
   
   
   def self.create_table
