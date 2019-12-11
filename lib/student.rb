@@ -27,6 +27,10 @@ class Student
     end
   end
   
+  def create
+    
+  end
+  
   
   
   def self.create_table
