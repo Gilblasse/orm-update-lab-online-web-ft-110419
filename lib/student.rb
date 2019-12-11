@@ -39,7 +39,7 @@ class Student
       SQL
       binding.pry
     students = DB[:conn].execute(sql,name).map{|row| self.new_from_db(row) }
-    students
+    students.first
   end
   
   def self.create(name,grade)
