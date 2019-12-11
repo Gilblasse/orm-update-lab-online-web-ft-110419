@@ -15,7 +15,6 @@ class Student
     INSERT INTO students(name,grade) VALUES (?,?)
     SQL
     DB[:conn].execute(sql,self.name,self.grade)
-    binding.pry
     # DB[:conn].execute("SELECT last_insert_rowid() FROM students").first.first
     DB[:conn].execute("SELECT * FROM students").last.first
   end
