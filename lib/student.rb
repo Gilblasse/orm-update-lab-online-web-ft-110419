@@ -11,7 +11,9 @@ class Student
   end
   
   def save 
-    
+    sql = <<-SQL
+    INSERTS INTO 
+    SQL
   end
   
   def self.create_table
