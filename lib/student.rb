@@ -10,6 +10,10 @@ class Student
     @grade = grade
   end
   
+  def self.new_from_db(row)
+    
+  end
+  
   def save 
     if self.id.nil?
       sql = <<-SQL
