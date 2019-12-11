@@ -33,7 +33,13 @@ class Student
     end
   end
   
-  def self.find
+  def self.find_by_name(name)
+    sql = <<-SQL
+      SELECT * FROM students WHERE name = ?
+      SQL
+      DB[:conn].execute(sql,name)
+  end
+  
   def self.create(name,grade)
     student = Student.new(name,grade)
     student.save
