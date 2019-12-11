@@ -37,7 +37,6 @@ class Student
     sql = <<-SQL
       SELECT * FROM students WHERE name = ?
       SQL
-      binding.pry
     students = DB[:conn].execute(sql,name).map{|row| self.new_from_db(row) }
     students.first
   end
