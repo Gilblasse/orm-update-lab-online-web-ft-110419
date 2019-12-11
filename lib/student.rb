@@ -47,7 +47,9 @@ class Student
     student
   end
   
-  def UPDATE
+  def update 
+    
+  end
   
   
   
