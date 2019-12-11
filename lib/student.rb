@@ -12,12 +12,13 @@ class Student
   
   def self.create_table
     sql = <<-SQL
-      CREATE TABLE students(
+      CREATE TABLE IF NOT EXISTS students(
       id INTEGER PRIMARY KEY,
       name TEXT,
-      grade 
+      grade TEXT 
       )
     SQL
+    DB[:conn].execute()
   end
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
