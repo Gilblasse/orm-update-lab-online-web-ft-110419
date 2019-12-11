@@ -16,7 +16,7 @@ class Student
     SQL
     DB[:conn].execute(sql,self.name,self.grade)
     binding.pry
-    DB[:conn].execute("SELECT * FROM students")
+    DB[:conn].execute("SELECT * FROM students").last.first
   end
   
   def self.create_table
