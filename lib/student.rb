@@ -11,8 +11,8 @@ class Student
   end
   
   def self.new_from_db(row)
-    self.new(name,grade)
-    @id,@name,@grade = row
+    id,name,grade = row
+    self.new(name,grade,id)
   end
   
   def save 
